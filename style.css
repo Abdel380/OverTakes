@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     background-color: #111111;
 }
+
 .animation {
     position: fixed;
     top: 0;
@@ -29,20 +30,19 @@ body {
     height: 100%;
     animation-duration: 1s; /* Durée de l'animation */
     animation-fill-mode: forwards; /* Laissez les éléments dans leur état final après l'animation */
+    background: #111111;
+    animation-delay: 1s;
+
 }
 
 .left-part-animation {
     left: 0;
-    background: #111111;
     animation-name: slideOutLeft;
-    animation-delay: 1s;
 }
 
 .right-part-animation {
     right: 0;
-    background: #111111;
     animation-name: slideOutRight;
-    animation-delay: 1s;
 }
 
 @keyframes slideOutLeft {
@@ -50,7 +50,7 @@ body {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-100vh);
         display: none;
     }
 }
@@ -60,7 +60,7 @@ body {
         transform: translateX(0);
     }
     to {
-        transform: translateX(100%); /* Déplacez la partie droite hors du cadre */
+        transform: translateX(100vh); /* Déplacez la partie droite hors du cadre */
         display: none;
     }
 }
@@ -103,9 +103,6 @@ header .logo-b {
 }
 
 
-
-
-
 header .mid {
     display: flex;
     justify-content: space-around;
@@ -119,6 +116,12 @@ header .mid {
 header .mid a {
     font-size: 18px;
     font-weight: 100;
+    color: white;
+    text-decoration: none;
+}
+
+header .mid a:hover {
+    color: red;
 }
 
 header .profil {
@@ -160,9 +163,9 @@ header .profil {
 .circuit:hover {
     transform: scale(2);
 }
+
 .circuit-container {
     width: 100%;
-    max-width: 1920px;
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -194,8 +197,7 @@ header .profil {
 }
 
 .img-circuit {
-    width: 90%;
-    
+    max-width: 190px;
 }
 
 .info-circuit {
@@ -228,7 +230,6 @@ header .profil {
     
 }
 
-
 @media screen and (max-width: 600px) {
     header .logo-text {
         display: none;
@@ -238,12 +239,10 @@ header .profil {
     }    
 }
 
-
-
-
 .poppins-black-italic {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: italic;
-  }
-  
+}
+
+

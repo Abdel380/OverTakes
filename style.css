@@ -77,11 +77,34 @@ header {
     z-index: 1000;
 }
 
-header h1 {
-    color : white;
-    font-style: italic;
+header .logo {
+    display: block;
+    font-size: 40px;
     margin-left: 25px;
 }
+
+header .logo-text {
+    float: left;
+}
+
+header .logo-text-small {
+    float: left;
+    display: none;
+}
+
+header .logo-a {
+    text-decoration: none;
+    color: white;
+}
+
+header .logo-b {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+
 
 header .mid {
     display: flex;
@@ -150,7 +173,6 @@ header .profil {
     display : flex;
     width: 1350px;
     margin-top: 25px;
-    display: flex;
     justify-content: space-around;
 }
 
@@ -197,3 +219,31 @@ header .profil {
     font-weight: 200;
     margin-left: 20px;
 }
+
+
+@media screen and (max-width: 1000px) {
+    header .mid {
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    header .logo-text {
+        display: none;
+    }
+    header .logo-text-small {
+        display: block;
+    }    
+}
+
+
+
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  

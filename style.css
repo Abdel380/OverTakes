@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #111111;
+}
+.animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    overflow: hidden; /* Cela cache les parties qui dépassent du cadre */
+}
+
+.left-part-animation, .right-part-animation {
+    position: absolute; /* Changez de 'fixed' à 'absolute' pour pouvoir animer */
+    top: 0;
+    width: 50%;
+    height: 100%;
+    animation-duration: 1s; /* Durée de l'animation */
+    animation-fill-mode: forwards; /* Laissez les éléments dans leur état final après l'animation */
+}
+
+.left-part-animation {
+    left: 0;
+    background: #111111;
+    animation-name: slideOutLeft;
+    animation-delay: 1s;
+}
+
+.right-part-animation {
+    right: 0;
+    background: #111111;
+    animation-name: slideOutRight;
+    animation-delay: 1s;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%); /* Déplacez la partie droite hors du cadre */
+        display: none;
+    }
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    color : white;
+    font-style: italic;
+    margin-left: 25px;
+}
+
+header .mid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+    margin-top: 15px;
+    transform: translateX(-15%);
+    color: white;
+}
+
+header .mid a {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+header .profil {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: aqua;
+    margin-right: 25px;
+}
+
+.video-container {
+    position: relative; 
+    width: 100%;
+    max-width: 1920px;
+}
+
+.video-container video {
+    width: 100%;
+}
+
+.fade {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0707077e 0%, rgba(255, 255, 255, 0) 10%, #111111 100%);
+}
+
+
+.circuit { 
+    color : white;
+    font-size: 45px;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 75px ;
+}
+
+.circuit:hover {
+    transform: scale(2);
+}
+.circuit-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.line {
+    display : flex;
+    width: 1350px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.circuit-card {
+    width: 230px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.barre {
+    width: 0;
+    height: 70%;
+    margin-top: 25px;
+    border-right: 1px solid white;    
+}
+
+.img-circuit {
+    width: 90%;
+    
+}
+
+.info-circuit {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 85%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    margin-top: 10px;
+}
+.info-circuit .flag-circuit {
+    width: 50px;
+    height: 35px;
+}
+.info-circuit h2{
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+    margin-left: 20px;
+}

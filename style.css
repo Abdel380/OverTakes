@@ -169,11 +169,13 @@ header .profil {
 .video-container {
     position: relative; 
     width: 100%;
-    max-width: 1920px;
+    height: 80vh;
+    overflow: hidden;
 }
 
 .video-container video {
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .fade {
@@ -185,47 +187,36 @@ header .profil {
     background: linear-gradient(to bottom, #0707077e 0%, rgba(255, 255, 255, 0) 10%, #111111 100%);
 }
 
-.circuit { 
+
+.circuit-container {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1300px;
+}
+.title { 
     color : white;
     font-size: 45px;
     font-weight: 300;
     font-style: italic;
-    margin-left: 75px ;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 18rem);
     justify-content: center;
-}
-
-
-.circuit-container {
-    width: 100%;
-    max-width: 1920px;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} 
-
-.line {
-    display : flex;
-    width: 1350px;
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-around;
+    max-width: 100%;
 }
 
 .circuit-card {
-    width: 230px;
-    height: 250px;
+    min-width: 230px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: filter 1s ease; /* Appliquer une transition à la propriété filter */    
+    transition: filter 1s ease; /* Appliquer une transition à la propriété filter */   
 }
 
 .circuit-card:hover .img-circuit {
@@ -234,7 +225,7 @@ header .profil {
 
 .gridDivider{
     width: 230px;
-    height: 70%;
+    height: 230px;
     display: flex;
     position: absolute;
     border-right: 1px solid #DEDEDE;
@@ -245,18 +236,16 @@ header .profil {
     padding-left: 1.8rem; /* size of gutter */
 }
 
-.barre {
-    width: 0;
-    height: 70%;
-    margin-top: 25px;
-    border-right: 1px solid white;    
-}
 
 .img-circuit {
     width: 90%;
+    opacity: 50%;
+    transition: opacity 0.3s ease;
 }
 .img-circuit:hover {
     cursor: pointer;
+    opacity: 90%;
+
 }
 
 .info-circuit {
@@ -269,6 +258,9 @@ header .profil {
     padding-left: 5%;
     margin-top: 10px;
 }
+.info-circuit:hover {
+    cursor: pointer;
+}
 .info-circuit .flag-circuit {
     width: 50px;
     height: 35px;
@@ -278,22 +270,30 @@ header .profil {
     font-size: 18px;
     font-weight: 200;
     margin-left: 20px;
+    opacity: 60%;
+    transition: opacity 0.3s ease;
 }
-.info-circuit:hover {
-    cursor: pointer;
+.circuit-card:hover h2{
+    opacity: 100%;
 }
 
 
-.circuit.classement  {
+
+.top-overtake-container {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1400px;
+}
+.title  {
     margin-top: 100px;
     margin-bottom: -10px; /* j'ai bidouiller donc c peut etre a refaire */
 }
 .top-overtake {
     width: 100%;
-    max-width: 1920px;
-    height: 300px;
     margin-top: 0;
     display: flex;
+    flex-wrap: wrap; /* Utiliser flex-wrap pour contrôler le comportement de passage à la ligne */
     justify-content: space-around;
     align-items: center;
 }
@@ -303,6 +303,7 @@ header .profil {
     width: 360px;
     height: 210px;
     border-radius: 8px;
+    margin-top: 35px;
     border: 1px solid rgb(217, 217, 217);
 }
 

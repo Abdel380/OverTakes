@@ -368,16 +368,15 @@ footer h3 {
     header .mid {
         display: none;
     }
- 
-    
 }
 
 @media screen and (max-width: 600px) {
     header .logo-text {
         display: none;
     }
+
     header .logo-text-small {
-        display: block;*
+        display: block;
     }
 
     .top-overtake-container {

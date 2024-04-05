@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
 *, body {
     padding: 0;
     margin: 0;
@@ -9,6 +8,7 @@
 
 body {
     width: 100%;
+    overflow-x: hidden;
     min-height: 100vh;
     background-color: #111111;
 }
@@ -199,7 +199,9 @@ header .profil {
     font-size: 45px;
     font-weight: 300;
     font-style: italic;
+    margin-left: 10vw;
 }
+
 
 .grid-container{
     display: grid;
@@ -277,18 +279,18 @@ header .profil {
     opacity: 100%;
 }
 
-
+.top-ot{
+    margin-top: 100px;
+}
 
 .top-overtake-container {
     margin-left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
 }
-.title  {
-    margin-top: 100px;
-    margin-bottom: -10px; /* j'ai bidouiller donc c peut etre a refaire */
-}
+
+
 .top-overtake {
     width: 100%;
     margin-top: 0;
@@ -350,7 +352,6 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-
     color: rgb(122, 122, 122);
     border-top: 1px solid rgb(74, 74, 74);
 }
@@ -367,6 +368,7 @@ footer h3 {
     header .mid {
         display: none;
     }
+ 
     
 }
 
@@ -375,6 +377,20 @@ footer h3 {
         display: none;
     }
     header .logo-text-small {
-        display: block;
-    }    
+        display: block;*
+    }
+
+    .top-overtake-container {
+        width: 80%;
+    }
+
+    .overtake-card {
+        width: 80vw;
+        height: auto;
+    }
+
+    .ranking { 
+        font-size: 80px;
+
+    }
 }
